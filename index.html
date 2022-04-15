@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">    
+</head>
+<body class="container bg-secondary">
+    
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+
+            <!-- Row 1 Image -->
+            <div class="row">
+                <div class="col-sm">
+                    <img src="https://media.dnd.wizards.com/styles/news_banner_header/public/images/head-banner/bg-heroes_0.jpg"
+                     class="img-fluid" alt="Banner">
+                </div>                
+            </div>
+
+            <!-- Row 2 -->
+            <div class ="row mt-5">
+                
+                <!-- Race -->
+                <div class="col-sm">
+                    <p>Choose your race:</p>
+                    <div class="form-check">                        
+                        <input type="radio" id="human" class="form-check-input" name="race" value="Human">
+                        <label class="form-check-label" for="human">Human</label>  
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="dwarf" class="form-check-input" name="race" value="Dwarf">
+                        <label class="form-check-label" for="dwarf">Dwarf</label>                        
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="elf" class="form-check-input" name="race" value="Elf">
+                        <label class="form-check-label" for="elf">Elf</label>                        
+                    </div>  
+                    <div class="form-check">
+                        <input type="radio" id="lizard" class="form-check-input" name="race" value="Lizard Folk">
+                        <label class="form-check-label" for="lizard">Lizard Folk</label>                        
+                    </div>                  
+                </div>
+
+                <!-- Class --> 
+                <div class="col-sm">
+                    <p>Choose your class:</p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-check">                        
+                                <input type="radio" id="barbarian" class="form-check-input" name="favClass" value="Barbarian">
+                                <label class="form-check-label" for="barbarian">Barbarian</label>  
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="bard" class="form-check-input" name="favClass" value="Bard">
+                                <label class="form-check-label" for="bard">Bard</label>                        
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="cleric" class="form-check-input" name="favClass" value="Cleric">
+                                <label class="form-check-label" for="cleric">Cleric</label>                        
+                            </div>              
+                            <div class="form-check">                        
+                                <input type="radio" id="druid" class="form-check-input" name="favClass" value="Druid">
+                                <label class="form-check-label" for="druid">Druid</label>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-check">
+                                <input type="radio" id="fighter" class="form-check-input" name="favClass" value="Fighter">
+                                <label class="form-check-label" for="fighter">Fighter</label>                        
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="monk" class="form-check-input" name="favClass" value="Monk">
+                                <label class="form-check-label" for="monk">Monk</label>                        
+                            </div>
+                            <div class="form-check">                        
+                                <input type="radio" id="paladin" class="form-check-input" name="favClass" value="Paladin">
+                                <label class="form-check-label" for="paladin">Paladin</label>  
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="ranger" class="form-check-input" name="favClass" value="Ranger">
+                                <label class="form-check-label" for="ranger">Ranger</label>                        
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-check">
+                                <input type="radio" id="rogue" class="form-check-input" name="favClass" value="Rogue">
+                                <label class="form-check-label" for="rogue">Rogue</label>                        
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="sorcerer" class="form-check-input" name="favClass" value="Sorcerer">
+                                <label class="form-check-label" for="sorcerer">Sorcerer</label>                        
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="warlock" class="form-check-input" name="favClass" value="Warlock">
+                                <label class="form-check-label" for="warlock">Warlock</label>                        
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="wizard" class="form-check-input" name="favClass" value="Wizard">
+                                <label class="form-check-label" for="wizard">Wizard</label>                        
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 Level -->
+            <div class="row mt-5">
+                <div class="col-sm">
+                    <form>
+                        <div class="form-group">
+                          <label for="myRange">Choose your level:</label>
+                          <input type="range" class="form-control-range" id="myRange" 
+                          min="1" max="20" value="10" onclick="getCharacterLevel()">
+                          <p>Level: <span id="demo"></span></p>
+                        </div>
+                      </form>
+                </div>                
+            </div>
+
+            <!-- Row 4 Name -->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-name">Name your character:</label>
+                        <input type="text" class = "form-control" id="new-name" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Create Button -->
+            <div>
+                <button id="add" class="btn btn-primary form-control">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- table -->
+    <table id="table" class="table table-light table-striped text-center">
+        <tr>
+            <th>Name</th>
+            <th>Race</th>
+            <th>Class</th>
+            <th>Level</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+    <script src="characters.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
